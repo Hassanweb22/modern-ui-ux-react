@@ -1,0 +1,225 @@
+.gpt3__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.gpt3__header-content {
+    flex: 2;
+    flex-direction: column;
+    margin-right: 5rem;
+    max-width: 60%
+}
+
+.gpt3__header-content>* {
+    margin-bottom: 2rem;
+}
+
+.gpt3__header-content>h1.gradient__text {
+    background-image: linear-gradient(60deg, #AE67FA, #F49867);
+    background-clip: text;
+    color: transparent;
+    font-size: 64px;
+    line-height: 75px;
+}
+
+.gpt3__header-content>p.info {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #81AFDD;
+}
+
+.gpt3__header-content__input {
+    display: flex;
+    align-items: stretch;
+    width: 85%;
+}
+
+.gpt3__header-content__input input {
+    flex: 2.2;
+    background: #052D56;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    border: 2px solid #929eaa69;
+    border-right: 0px;
+    padding: 0rem 1rem;
+    line-height: 27px;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    min-height: 50px;
+}
+
+.gpt3__header-content__input button {
+    flex: 0.8;
+    background: #FF4820;
+    border-radius: 0px 5px 5px 0px;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    line-height: 27px;
+    /* border: none; */
+    border: 2px solid #FF4820;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    min-height: 50px;
+    transition: all 0.4s ease-in;
+    max-width: 160px
+}
+
+.gpt3__header-content__input button:hover {
+    background: #ff4920d3;
+}
+
+.gpt3__header-content__people {
+    display: flex;
+    align-items: center;
+    /* gap: 10px */
+}
+
+.gpt3__header-content__people>img {
+    height: 38px;
+    width: 180px;
+}
+
+.gpt3__header-content__people>p {
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 0 0 10px;
+}
+
+.gpt3__header-image {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem
+}
+
+.gpt3__header-image>div {
+    position: relative;
+    min-width: 400px;
+    min-height: 500px;
+    width: 100%;
+}
+
+
+.gpt3__header-image>div>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width:960px) {
+    .gpt3__header {
+        flex-direction: column;
+    }
+
+    .gpt3__header-content__input {
+        width: 100%;
+    }
+
+    .gpt3__header-content {
+        margin: 0 0 3rem;
+        max-width: 100%;
+    }
+
+    .gpt3__header-image {
+        margin-top: 0rem;
+    }
+
+    .gpt3__header-image>div {
+        min-width: 400px;
+        min-height: 440px;
+    }
+}
+
+@media screen and (max-width:700px) {
+
+
+    .gpt3__header-content>* {
+        margin-bottom: 1.5rem;
+    }
+
+    .gpt3__header-content>h1.gradient__text {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .gpt3__header-content>p.info {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .gpt3__header-content__people {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gpt3__header-content__people>p {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .gpt3__header-content__input input, .gpt3__header-content__input button {
+        font-size: 16px;
+        min-height: 40px;
+    }
+
+    .gpt3__header-image>div {
+        min-width: 300px;
+        min-height: 340px;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .gpt3__header-content {
+        margin: 0 0 2rem;
+    }
+
+    .gpt3__header-content>* {
+        margin-bottom: 1.2rem;
+    }
+
+    .gpt3__header-content>h1.gradient__text {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .gpt3__header-content>p.info {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .gpt3__header-content__input input, .gpt3__header-content__input button {
+        font-size: 12px;
+        min-height: 35px;
+    }
+
+    .gpt3__header-content__input button {
+        flex: 0.8;
+        padding: 0 0.5rem
+    }
+
+    .gpt3__header-image>div {
+        min-width: 270px;
+        min-height: 300px;
+    }
+}
+
+@supports (background-clip: text) {
+    .gradient-text {
+        background-image: linear-gradient(60deg, #E21143, #FFB03A);
+        background-clip: text;
+        color: transparent;
+    }
+}
