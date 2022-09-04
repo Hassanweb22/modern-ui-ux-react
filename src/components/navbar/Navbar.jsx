@@ -4,13 +4,13 @@ import "./navbar.css"
 import Logo from "../../assets/logo.svg"
 import { useDelayUnmount } from "../../hooks"
 
-const Menu = () => (
+const Menu = ({ setToggeleMenu }) => (
     <React.Fragment>
-        <p><a>Home</a></p>
-        <p><a>What is GPT</a></p>
-        <p><a>Open AI</a></p>
-        <p><a>Case Studies</a></p>
-        <p><a>Libraries</a></p>
+        <p><a href='#home' onClick={() => setToggeleMenu(false)}>Home</a></p>
+        <p><a href='#whatGPT3' onClick={() => setToggeleMenu(false)}>What is GPT</a></p>
+        <p><a href='#fetures' onClick={() => setToggeleMenu(false)}>Open AI</a></p>
+        <p><a href='#possiblity' onClick={() => setToggeleMenu(false)}>Case Studies</a></p>
+        <p><a href='#blog' onClick={() => setToggeleMenu(false)}>Libraries</a></p>
     </React.Fragment>
 )
 
@@ -25,7 +25,7 @@ const Navbar = () => {
                     <img src={Logo} alt="Logo" />
                 </div>
                 <div className="gpt3__navbar-links_container">
-                    <Menu />
+                    <Menu setToggeleMenu={setToggeleMenu} />
                 </div>
             </div>
             <div className="gpt3__navbar-sign">
@@ -43,7 +43,7 @@ const Navbar = () => {
                 {shouldRenderMenu &&
                     <div className={`gpt3__navbar-menu_container ${toggeleMenu ? "scale-up-tr" : "scale-down-tr"}`}>
                         <div className="gpt3__navbar-menu_container-links">
-                            <Menu />
+                            <Menu setToggeleMenu={setToggeleMenu} />
                         </div>
                         <div className="gpt3__navbar-menu_container-links-sign">
                             <p>Sign in</p>

@@ -148,7 +148,7 @@ a {
 
 @media screen and (max-width: 450px) {
   .section_padding {
-    padding: 2rem 2rem;
+    padding: 2rem 1.5rem;
   }
 
   .section_margin {
